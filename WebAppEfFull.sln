@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppEfFull", "WebAppEfFull\WebAppEfFull.csproj", "{AB314CD0-8839-4F40-9958-91E243A6B156}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppEfCodeFirst", "WebAppEfCodeFirst\WebAppEfCodeFirst.csproj", "{B445C2AC-7B74-41B5-BC7D-4F906FB5BC2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src_firstEfCore", "src_firstEfCore", "{DD9FDF88-B659-4B06-BE92-10814B5BC57E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src_ContosoEfCoreDbFirst", "src_ContosoEfCoreDbFirst", "{CE648375-ACB5-4175-9F50-C5D07F2626EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
