@@ -7,5 +7,6 @@
 - Db First: reverse engineering existing Db
 - Db MS Sql based Db hosted in Azure.(Arm base hardware does not handle local instance)... more to come
 - Cleanup the two projects, decide which one to merge first and refactor the second one
+- Document the minimum steps to start using EF Core + name of the libraries necessary to use EF Core 
   
   
