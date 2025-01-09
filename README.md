@@ -9,4 +9,5 @@
 - Cleanup the two projects, decide which one to merge first and refactor the second one
 - Document the minimum steps to start using EF Core + name of the libraries necessary to use EF Core
 - Describe project infrastructure including solution and non-solutuon folder/file structures
-- Attempt to explain using examples code to first joins using navigational properties 
+- Attempt to explain using examples code to first joins using navigational properties
+- Something to experiment with. Use code first approach and come up with a workflow, each step would return a task and work with WhenAll() extension 
