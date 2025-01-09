@@ -10,4 +10,5 @@
 - Document the minimum steps to start using EF Core + name of the libraries necessary to use EF Core
 - Describe project infrastructure including solution and non-solutuon folder/file structures
 - Attempt to explain using examples code to first joins using navigational properties
-- Something to experiment with. Use code first approach and come up with a workflow, each step would return a task and work with WhenAll() extension 
+- Something to experiment with. Use code first approach and come up with a workflow, each step would return a task and work with WhenAll() extension
+- Another idea, use Zoran Horvat articles and YT to learn more about functional approach in EF Code First 
