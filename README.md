@@ -13,4 +13,4 @@
 - Something to experiment with. Use code first approach and come up with a workflow, each step would return a task and work with WhenAll() extension
 - Another idea, use Zoran Horvat articles and YT to learn more about functional approach in EF Code First 
 - Spend no more than 3 library sessions on DSA, YT girl (see history) that teaches it
-- FYI use nulo coalescing operator with ??= make sure sure there are s a explanations for chaining 
+- FYI use null coalescing operator with ??= make sure sure there are s a explanations for chaining 
