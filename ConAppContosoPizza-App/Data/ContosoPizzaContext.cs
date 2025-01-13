@@ -14,9 +14,4 @@ public class ContosoPizzaContext : DbContext
 	public DbSet<Order> Orders { get; set; } = null!;
 	public DbSet<Product> Products { get; set; } = null!;
 	public DbSet<OrderDetails> OrderDetails { get; set; } = null!;
-
-	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-	{
-		optionsBuilder.UseSqlServer(@"AzureConnectionString");
-	}
 }
