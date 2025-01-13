@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src_ContosoEfCoreDbFirst", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C717E179-621F-4E7D-A040-4C6987ED3B20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConAppContosoPizza-App", "ConAppContosoPizza-App\ConAppContosoPizza-App.csproj", "{9D36CD9F-D058-4B89-A5A6-6A3D2C2F0AF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B445C2AC-7B74-41B5-BC7D-4F906FB5BC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B445C2AC-7B74-41B5-BC7D-4F906FB5BC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B445C2AC-7B74-41B5-BC7D-4F906FB5BC2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D36CD9F-D058-4B89-A5A6-6A3D2C2F0AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D36CD9F-D058-4B89-A5A6-6A3D2C2F0AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D36CD9F-D058-4B89-A5A6-6A3D2C2F0AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D36CD9F-D058-4B89-A5A6-6A3D2C2F0AF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 		{6F843FB1-7FF7-4BA4-B2DA-3A314665DAAC} = {C717E179-621F-4E7D-A040-4C6987ED3B20}
 		{B445C2AC-7B74-41B5-BC7D-4F906FB5BC2E} = {C717E179-621F-4E7D-A040-4C6987ED3B20}
 		{C717E179-621F-4E7D-A040-4C6987ED3B20} = {DD9FDF88-B659-4B06-BE92-10814B5BC57E}
+		{9D36CD9F-D058-4B89-A5A6-6A3D2C2F0AF6} = {CE648375-ACB5-4175-9F50-C5D07F2626EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {407D3D20-656E-4BB6-8727-8E6540AFD595}
