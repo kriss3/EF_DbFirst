@@ -12,19 +12,5 @@ internal class Program
 	static void Main()
 	{
 		WriteLine("Contoso Pizza. EF Core - Code First.");
-		var azConnString = GetConfiguration()["ContosoPizza:azureConnString"];
-
-		var serviceCollection = new ServiceCollection();
-		serviceCollection.AddDbContext<ContosoPizzaContext>(options =>
-			options.UseSqlServer(azConnString));
-		var serviceProvider = serviceCollection.BuildServiceProvider();
-
-	}
-
-	static IConfiguration GetConfiguration()
-	{
-		var builder = new ConfigurationBuilder()
-			.AddUserSecrets<Program>();
-		return builder.Build();
 	}
 }
