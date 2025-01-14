@@ -12,7 +12,7 @@ internal class Program
 	static void Main()
 	{
 		WriteLine("Contoso Pizza. EF Core - Code First.");
-		var azConnString = GetConfiguration()["AzureConnectionString"];
+		var azConnString = GetConfiguration()["ContosoPizza:azureConnString"];
 
 		var serviceCollection = new ServiceCollection();
 		serviceCollection.AddDbContext<ContosoPizzaContext>(options =>

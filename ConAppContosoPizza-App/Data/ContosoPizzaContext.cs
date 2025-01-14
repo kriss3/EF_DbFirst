@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConAppContosoPizza_App.Data;
-public class ContosoPizzaContext : DbContext
+public class ContosoPizzaContext(DbContextOptions<ContosoPizzaContext> options) : DbContext(options)
 {
 	public DbSet<Customer> Customers { get; set; } = null!;
 	public DbSet<Order> Orders { get; set; } = null!;
