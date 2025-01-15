@@ -34,5 +34,10 @@ public class EfOperationsService(ContosoPizzaContext context)
 		_context.Customers.Add(customer);
 		_context.SaveChanges();
 	}
+
+	public List<Product> GetProducts()
+	{
+		return [.. _context.Products];
+	}
 }
 
