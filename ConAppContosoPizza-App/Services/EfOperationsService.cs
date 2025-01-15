@@ -16,5 +16,11 @@ public class EfOperationsService(ContosoPizzaContext context)
 		_context.Products.Add(product);
 		_context.SaveChanges();
 	}
+
+	public void AddOrder(Order order)
+	{
+		_context.Orders.Add(order);
+		_context.SaveChanges();
+	}
 }
 
