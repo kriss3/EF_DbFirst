@@ -1,13 +1,18 @@
 ﻿using ConAppContosoPizza_App.Data;
 using ConAppContosoPizza_App.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConAppContosoPizza_App.Services;
-public class EfOperationsService(ContosoPizzaContext context)
+
+public interface IEfOperationsService
+{
+	void AddCustomer(Customer customer);
+	void AddOrder(Order order);
+	void AddOrderDetails(OrderDetails orderDetails);
+	void AddProduct(Product product);
+	List<Product> GetProducts();
+}
+
+public class EfOperationsService(ContosoPizzaContext context) : IEfOperationsService
 {
 	private readonly ContosoPizzaContext _context = context;
 
