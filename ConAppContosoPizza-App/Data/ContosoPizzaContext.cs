@@ -20,7 +20,7 @@ public class ContosoPizzaContext : DbContext
 		IConfiguration configuration = new ConfigurationBuilder()
 			.AddUserSecrets<Program>()
 			.Build();
-		var azConnString = configuration.GetConnectionString("kws_azdb:azConnString");
+		var azConnString = configuration.GetSection("kws_azdb")["azConnString"];
 
 		return azConnString ?? "";
 	}
