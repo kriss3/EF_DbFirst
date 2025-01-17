@@ -19,23 +19,28 @@ internal class Program
 
 		var services = new EfOperationsService(myContosoSvc);
 
-		if (services.GetProducts().Count == 0) 
+		if (services.GetProducts().Count == 0)
 		{
 			CreateProducts(services);
 		}
 
-		var products = services.GetProducts()
-			.Where(p => p.Price > 10.00M)
-			.OrderBy(p => p.Name);
+		IOrderedEnumerable<Product> products = GetProducts(services);
 
-		foreach (var product in products) 
+		foreach (var product in products)
 		{
-			WriteLine($"Id:			{product.Id}");	
-			WriteLine($"Name:		{product.Name}");	
+			WriteLine($"Id:			{product.Id}");
+			WriteLine($"Name:		{product.Name}");
 			WriteLine($"Price		{product.Price}");
-			WriteLine(new string('-', 20));	
+			WriteLine(new string('-', 20));
 		}
 
+	}
+
+	private static IOrderedEnumerable<Product> GetProducts(EfOperationsService services)
+	{
+		return services.GetProducts()
+					.Where(p => p.Price > 10.00M)
+					.OrderBy(p => p.Name);
 	}
 
 	private static void CreateProducts(EfOperationsService services)
