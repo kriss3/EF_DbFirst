@@ -18,7 +18,12 @@ internal class Program
 		using var myContosoSvc = new ContosoPizzaContext();
 
 		var services = new EfOperationsService(myContosoSvc);
-		CreateProducts(services);
+
+		// check if there are any product?
+		if (services.GetProducts().Count == 0) 
+		{
+			CreateProducts(services);
+		}
 
 		var products = services.GetProducts()
 			.Where(p => p.Price > 10.00M)
