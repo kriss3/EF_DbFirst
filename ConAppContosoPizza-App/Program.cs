@@ -19,7 +19,6 @@ internal class Program
 
 		var services = new EfOperationsService(myContosoSvc);
 
-		// check if there are any product?
 		if (services.GetProducts().Count == 0) 
 		{
 			CreateProducts(services);
