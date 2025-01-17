@@ -16,7 +16,12 @@ internal class Program
 		WriteLine("Contoso Pizza. EF Core - Code First.");
 
 		var services = new EfOperationsService(new ContosoPizzaContext());
+		CreateProducts(services);
 
+	}
+
+	private static void CreateProducts(EfOperationsService services)
+	{
 		services.AddProduct(new Product { Name = "Pizza Margherita", Price = 12.50m });
 		services.AddProduct(new Product { Name = "Pizza Pepperoni", Price = 15.50m });
 		services.AddProduct(new Product { Name = "Pizza Capricciosa", Price = 14.50m });
