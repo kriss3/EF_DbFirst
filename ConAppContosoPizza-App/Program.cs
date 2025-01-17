@@ -25,7 +25,12 @@ internal class Program
 		}
 
 		IOrderedEnumerable<Product> products = GetProducts(services);
+		ShowProductDetails(products);
 
+	}
+
+	private static void ShowProductDetails(IOrderedEnumerable<Product> products)
+	{
 		foreach (var product in products)
 		{
 			WriteLine($"Id:			{product.Id}");
@@ -33,7 +38,6 @@ internal class Program
 			WriteLine($"Price		{product.Price}");
 			WriteLine(new string('-', 20));
 		}
-
 	}
 
 	private static IOrderedEnumerable<Product> GetProducts(EfOperationsService services)
