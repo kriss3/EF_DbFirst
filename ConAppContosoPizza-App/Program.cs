@@ -15,8 +15,22 @@ internal class Program
 	{
 		WriteLine("Contoso Pizza. EF Core - Code First.");
 
-		var services = new EfOperationsService(new ContosoPizzaContext());
+		using var myContosoSvc = new ContosoPizzaContext();
+
+		var services = new EfOperationsService(myContosoSvc);
 		CreateProducts(services);
+
+		var products = services.GetProducts()
+			.Where(p => p.Price > 10.00M)
+			.OrderBy(p => p.Name);
+
+		foreach (var product in products) 
+		{
+			WriteLine($"Id:			{product.Id}");	
+			WriteLine($"Name:		{product.Name}");	
+			WriteLine($"Price		{product.Price}");
+			WriteLine(new string('-', 20));	
+		}
 
 	}
 
