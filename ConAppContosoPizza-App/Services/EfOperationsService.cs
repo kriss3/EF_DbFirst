@@ -10,6 +10,7 @@ public interface IEfOperationsService
 	void AddOrderDetails(OrderDetails orderDetails);
 	void AddProduct(Product product);
 	List<Product> GetProducts();
+	List<Customer> GetCustomers();
 }
 
 public class EfOperationsService(ContosoPizzaContext context) : IEfOperationsService
@@ -43,6 +44,11 @@ public class EfOperationsService(ContosoPizzaContext context) : IEfOperationsSer
 	public List<Product> GetProducts()
 	{
 		return [.. _context.Products];
+	}
+
+	public List<Customer> GetCustomers()
+	{
+		return [.. _context.Customers];
 	}
 }
 

@@ -21,6 +21,11 @@ internal class Program
 			CreateProducts(services);
 		}
 
+		if (services.GetCustomers().Count == 0)
+		{
+			CreateCustomers(services);
+		}
+
 		IOrderedEnumerable<Product> products = GetProducts(services);
 		ShowProductDetails(products);
 
