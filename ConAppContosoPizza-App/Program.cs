@@ -71,6 +71,7 @@ internal class Program
 				new() { FirstName = "Daniel", LastName = "Anderson", Address = "852 Fir St", Phone = "555-8524", Email = "daniel.anderson@example.com" },
 				new() { FirstName = "Laura", LastName = "Thomas", Address = "951 Willow St", Phone = "555-9513", Email = "laura.thomas@example.com" }
 			};
+		customers.ForEach(c => services.AddCustomer(c));
 	}
 
 }
