@@ -6,7 +6,7 @@ using static System.Console;
 
 namespace ConAppContosoPizza_App;
 
-internal class Program
+public class Program
 {
 	static void Main()
 	{
