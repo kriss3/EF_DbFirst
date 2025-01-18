@@ -2,9 +2,6 @@
 using ConAppContosoPizza_App.Data;
 using ConAppContosoPizza_App.Models;
 using ConAppContosoPizza_App.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using static System.Console;
 
 namespace ConAppContosoPizza_App;
