@@ -29,6 +29,9 @@ internal class Program
 		IOrderedEnumerable<Product> products = GetProducts(services);
 		ShowProductDetails(products);
 
+		IOrderedEnumerable<Customer> customers = GetCustomers(services);
+		ShowCustomerDetails(customers);
+
 	}
 
 	private static void ShowProductDetails(IOrderedEnumerable<Product> products)
@@ -74,4 +77,23 @@ internal class Program
 		customers.ForEach(c => services.AddCustomer(c));
 	}
 
+	private static IOrderedEnumerable<Customer> GetCustomers(EfOperationsService services)
+	{
+		return services.GetCustomers()
+					.OrderBy(c => c.LastName)
+					.ThenBy(c => c.FirstName);
+	}
+
+	private static void ShowCustomerDetails(IOrderedEnumerable<Customer> customers)
+	{
+		foreach (var customer in customers)
+		{
+			WriteLine($"Id:			{customer.Id}");
+			WriteLine($"Name:		{customer.FirstName} {customer.LastName}");
+			WriteLine($"Address:	{customer.Address}");
+			WriteLine($"Phone:		{customer.Phone}");
+			WriteLine($"Email:		{customer.Email}");
+			WriteLine(new string('-', 20));
+		}
+	}
 }
