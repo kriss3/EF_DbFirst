@@ -12,6 +12,7 @@ public interface IEfOperationsService
 	List<Product> GetProducts();
 	List<Customer> GetCustomers();
 	List<Order> GetOrders();
+	List<OrderDetails> GetOrderDetails();
 }
 
 public class EfOperationsService(ContosoPizzaContext context) : IEfOperationsService
