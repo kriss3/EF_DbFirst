@@ -26,11 +26,19 @@ public class Program
 			CreateCustomers(services);
 		}
 
+		if (services.GetOrders().Count == 0)
+		{
+			CreateOrders(services);
+		}
+
 		IOrderedEnumerable<Product> products = GetProducts(services);
 		ShowProductDetails(products);
 
 		IOrderedEnumerable<Customer> customers = GetCustomers(services);
 		ShowCustomerDetails(customers);
+
+		IOrderedEnumerable<Order> orders = GetOrders(services);
+		ShowOrderDetails(orders);
 
 	}
 
