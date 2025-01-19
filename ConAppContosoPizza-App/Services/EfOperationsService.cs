@@ -56,5 +56,11 @@ public class EfOperationsService(ContosoPizzaContext context) : IEfOperationsSer
 	{
 		return [.. _context.Orders];
 	}
+
+	public List<OrderDetails> GetOrderDetails()
+	{
+		return [.. _context.OrderDetails];
+	}
+
 }
 
