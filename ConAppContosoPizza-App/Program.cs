@@ -114,4 +114,10 @@ public class Program
 			};
 		orders.ForEach(o => services.AddOrder(o));
 	}
+
+	private static IOrderedEnumerable<Order> GetOrders(EfOperationsService services)
+	{
+		return services.GetOrders()
+					.OrderBy(o => o.OrderPlaced);
+	}
 }
