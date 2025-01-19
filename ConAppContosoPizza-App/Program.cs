@@ -120,4 +120,16 @@ public class Program
 		return services.GetOrders()
 					.OrderBy(o => o.OrderPlaced);
 	}
+
+	private static void ShowOrderDetails(IOrderedEnumerable<Order> orders)
+	{
+		foreach (var order in orders)
+		{
+			WriteLine($"Id:            {order.Id}");
+			WriteLine($"Order Placed:  {order.OrderPlaced}");
+			WriteLine($"Order Fulfilled: {order.OrderFulfilled}");
+			WriteLine($"Customer Id:   {order.CustomerId}");
+			WriteLine(new string('-', 20));
+		}
+	}
 }
