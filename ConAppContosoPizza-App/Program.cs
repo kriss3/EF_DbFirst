@@ -96,4 +96,22 @@ public class Program
 			WriteLine(new string('-', 20));
 		}
 	}
+
+	private static void CreateOrders(EfOperationsService services)
+	{
+		var orders = new List<Order>
+			{
+				new() { OrderPlaced = DateTime.Now.AddDays(-10), OrderFulfilled = DateTime.Now.AddDays(-5), CustomerId = 1 },
+				new() { OrderPlaced = DateTime.Now.AddDays(-8), OrderFulfilled = DateTime.Now.AddDays(-3), CustomerId = 2 },
+				new() { OrderPlaced = DateTime.Now.AddDays(-6), OrderFulfilled = DateTime.Now.AddDays(-2), CustomerId = 3 },
+				new() { OrderPlaced = DateTime.Now.AddDays(-4), OrderFulfilled = DateTime.Now.AddDays(-1), CustomerId = 4 },
+				new() { OrderPlaced = DateTime.Now.AddDays(-2), OrderFulfilled = DateTime.Now, CustomerId = 5 },
+				new() { OrderPlaced = DateTime.Now.AddDays(-1), OrderFulfilled = DateTime.Now.AddDays(1), CustomerId = 6 },
+				new() { OrderPlaced = DateTime.Now, OrderFulfilled = DateTime.Now.AddDays(2), CustomerId = 7 },
+				new() { OrderPlaced = DateTime.Now.AddDays(1), OrderFulfilled = DateTime.Now.AddDays(3), CustomerId = 8 },
+				new() { OrderPlaced = DateTime.Now.AddDays(2), OrderFulfilled = DateTime.Now.AddDays(4), CustomerId = 9 },
+				new() { OrderPlaced = DateTime.Now.AddDays(3), OrderFulfilled = DateTime.Now.AddDays(5), CustomerId = 10 }
+			};
+		orders.ForEach(o => services.AddOrder(o));
+	}
 }
