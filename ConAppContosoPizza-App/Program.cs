@@ -178,4 +178,18 @@ public class Program
 		return services.GetOrderDetails()
 					.OrderBy(od => od.OrderId);
 	}
+
+	private static void ShowOrderDetails(IOrderedEnumerable<OrderDetails> orderDetails)
+	{
+		foreach (var orderDetail in orderDetails)
+		{
+			WriteLine($"Order Id:				{orderDetail.OrderId}");
+			WriteLine($"Product Id:			{orderDetail.ProductId}");
+			WriteLine($"Quantity:				{orderDetail.Quantity}");
+			WriteLine($"Product Name:		{orderDetail.Product.Name}");
+			WriteLine($"Customer:			{orderDetail.Order.Customer.FirstName}");
+			WriteLine(new string('-', 20));
+		}
+	}
+
 }
