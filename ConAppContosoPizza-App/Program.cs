@@ -16,14 +16,14 @@ public class Program
 
 		var services = new EfOperationsService(myContosoSvc);
 
-		if (services.GetProducts().Count == 0)
-		{
-			CreateProducts(services);
-		}
-
 		if (services.GetCustomers().Count == 0)
 		{
 			CreateCustomers(services);
+		}
+
+		if (services.GetProducts().Count == 0)
+		{
+			CreateProducts(services);
 		}
 
 		if (services.GetOrders().Count == 0)
@@ -31,14 +31,14 @@ public class Program
 			CreateOrders(services);
 		}
 
-		IOrderedEnumerable<Product> products = GetProducts(services);
-		ShowProductDetails(products);
-
 		IOrderedEnumerable<Customer> customers = GetCustomers(services);
 		ShowCustomerDetails(customers);
 
+		IOrderedEnumerable<Product> products = GetProducts(services);
+		ShowProductDetails(products);
+
 		IOrderedEnumerable<Order> orders = GetOrders(services);
-		ShowOrderDetails(orders);
+		ShowOrders(orders);
 
 	}
 
@@ -129,7 +129,7 @@ public class Program
 					.OrderBy(o => o.OrderPlaced);
 	}
 
-	private static void ShowOrderDetails(IOrderedEnumerable<Order> orders)
+	private static void ShowOrders(IOrderedEnumerable<Order> orders)
 	{
 		foreach (var order in orders)
 		{
