@@ -31,6 +31,11 @@ public class Program
 			CreateOrders(services);
 		}
 
+		if (services.GetOrderDetails().Count == 0)
+		{
+			CreateOrderDetails(services);
+		}
+
 		IOrderedEnumerable<Customer> customers = GetCustomers(services);
 		ShowCustomerDetails(customers);
 
