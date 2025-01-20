@@ -9,10 +9,10 @@ public interface IEfOperationsService
 	void AddOrder(Order order);
 	void AddOrderDetails(OrderDetails orderDetails);
 	void AddProduct(Product product);
-	List<Product> GetProducts();
 	List<Customer> GetCustomers();
 	List<Order> GetOrders();
 	List<OrderDetails> GetOrderDetails();
+	List<Product> GetProducts();
 }
 
 public class EfOperationsService(ContosoPizzaContext context) : IEfOperationsService
