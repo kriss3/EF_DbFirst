@@ -140,4 +140,31 @@ public class Program
 			WriteLine(new string('-', 20));
 		}
 	}
+
+	private static void CreateOrderDetails(EfOperationsService services)
+	{
+		var orders = services.GetOrders();
+		var products = services.GetProducts();
+		var random = new Random();
+
+		var orderDetails = new List<OrderDetails>();
+
+		for (int i = 0; i < 10; i++)
+		{
+			var order = orders[random.Next(orders.Count)];
+			var product = products[random.Next(products.Count)];
+			var quantity = random.Next(1, 10);
+
+			orderDetails.Add(new OrderDetails
+			{
+				OrderId = order.Id,
+				ProductId = product.Id,
+				Quantity = quantity,
+				Order = order,
+				Product = product
+			});
+		}
+
+		orderDetails.ForEach(od => services.AddOrderDetails(od));
+	}
 }
