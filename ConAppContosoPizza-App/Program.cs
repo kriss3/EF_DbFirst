@@ -172,4 +172,10 @@ public class Program
 
 		orderDetails.ForEach(od => services.AddOrderDetails(od));
 	}
+
+	private static IOrderedEnumerable<OrderDetails> GetOrderDetails(EfOperationsService services)
+	{
+		return services.GetOrderDetails()
+					.OrderBy(od => od.OrderId);
+	}
 }
